@@ -1,0 +1,31 @@
+/* === Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Базовые переменные === */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --font-main: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* === Базовые стили === */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* === Утилиты и компоненты добавлять ниже === */
