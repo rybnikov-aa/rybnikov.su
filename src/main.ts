@@ -1,4 +1,5 @@
 import '../css/style.css';
+import mainHtml from './main.html?raw';
 
 function createCard(title: string, content: string): HTMLElement {
   const card = document.createElement('div');
@@ -17,33 +18,7 @@ function init(): void {
   const app = document.getElementById('app');
   if (!app) return;
 
-  app.innerHTML = `
-    <header class="header">
-      <nav class="nav">
-        <div class="logo">rybnikov.su</div>
-        <ul class="nav-links">
-          <li><a href="#" class="active">Главная</a></li>
-          <li><a href="#">Фотогалерея</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="container">
-      <section class="feed-world">
-        <h2 class="feed-title">В мире</h2>
-        <div class="feed-grid" id="world-feed"></div>
-      </section>
-
-      <section class="feed-family">
-        <h2 class="feed-title">В семье</h2>
-        <div class="feed-grid" id="family-feed"></div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>&copy; 2026 rybnikov.su</p>
-    </footer>
-  `;
+  app.innerHTML = mainHtml;
 
   const familyFeed = document.getElementById('family-feed');
   const worldFeed = document.getElementById('world-feed');
